@@ -1,3 +1,4 @@
+import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import FeaturedScroll from './components/FeaturedScroll';
@@ -20,6 +21,7 @@ import Footer from './components/Footer';
 
 export default function App() {
   return (
+    <ThemeProvider>
     <div className="bg-white min-h-screen text-[#0f0f0f] relative antialiased scroll-smooth selection:bg-[#6c2bd9] selection:text-white">
       <Navbar />
       <Hero />
@@ -41,5 +43,6 @@ export default function App() {
       <GlobalPresence />
       <Footer />
     </div>
+    </ThemeProvider>
   );
 }

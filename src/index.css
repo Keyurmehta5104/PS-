@@ -6,17 +6,10 @@
 
 /* ── Design Tokens (matches indianic.com aesthetic) ─────────── */
 @theme {
-  /* ── Breakpoints (must be explicit in Tailwind v4) ────────── */
-  --breakpoint-sm:  640px;
-  --breakpoint-md:  768px;
-  --breakpoint-lg:  1024px;
-  --breakpoint-xl:  1280px;
-  --breakpoint-2xl: 1536px;
-
   /* Fonts — single clean geometric sans-serif like indianic */
-  --font-sans:    "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-display: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono:    "JetBrains Mono", "Fira Code", "Courier New", monospace;
+  --font-mono: "JetBrains Mono", "Fira Code", "Courier New", monospace;
 
   /* Brand palette — Professional Softtech */
   --color-brand:        #1557FF;   /* vibrant electric blue — primary accent   */
@@ -119,14 +112,79 @@
     text-transform: uppercase;
     color: #1557FF;
   }
+}
 
-  /* ── Navbar responsive helpers ─────────────────────────────── */
-  /* Fallback for any component still using className-based show/hide */
-  .nav-desktop { display: none !important; }
-  .nav-mobile  { display: flex !important; }
+/* ── Global Dark Mode ──────────────────────────────────────────── */
+html.dark-mode body {
+  background-color: #0d0d0d !important;
+  color: #e5e5e5 !important;
+}
 
-  @media (min-width: 1024px) {
-    .nav-desktop { display: flex !important; }
-    .nav-mobile  { display: none !important; }
+html.dark-mode section,
+html.dark-mode header,
+html.dark-mode footer {
+  background-color: #0d0d0d !important;
+  border-color: rgba(255,255,255,0.08) !important;
+  color: #e5e5e5 !important;
+}
+
+html.dark-mode h1, html.dark-mode h2, html.dark-mode h3,
+html.dark-mode h4, html.dark-mode h5, html.dark-mode h6 {
+  color: #ffffff !important;
+}
+
+html.dark-mode p { color: #a3a3a3 !important; }
+
+html.dark-mode .bg-white,
+html.dark-mode [class*="bg-white"] {
+  background-color: #111111 !important;
+}
+
+/* ── Navbar dark mode overrides ────────────────────────────────── */
+html.dark-mode nav {
+  background: #0a0a0a !important;
+  border-color: rgba(255,255,255,0.07) !important;
+}
+
+/* ── Hero card dark mode overrides ─────────────────────────────── */
+/* Card 02 - Mobile Apps (light bg) */
+html.dark-mode [data-card="02"] {
+  background: #1a1a1a !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+html.dark-mode [data-card="02"] p { color: #fff !important; }
+html.dark-mode [data-card="02"] p:last-child { color: rgba(255,255,255,0.45) !important; }
+
+/* Card 03 - Custom Web Dev (white bg) */
+html.dark-mode [data-card="03"] {
+  background: #1a1a1a !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+html.dark-mode [data-card="03"] p { color: #fff !important; }
+html.dark-mode [data-card="03"] p:last-child { color: rgba(255,255,255,0.45) !important; }
+
+/* Card 05 - Dedicated Teams (cream bg) */
+html.dark-mode [data-card="05"] {
+  background: #1a1a1a !important;
+}
+html.dark-mode [data-card="05"] p { color: #fff !important; }
+html.dark-mode [data-card="05"] p:last-child { color: rgba(255,255,255,0.45) !important; }
+
+/* Stats strip dark */
+html.dark-mode [data-stats] p:first-child { color: #fff !important; }
+html.dark-mode [data-stats] p:last-child  { color: rgba(255,255,255,0.35) !important; }
+
+/* ── Hero responsive grid ──────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .hero-inner {
+    grid-template-columns: 1fr !important;
+    padding: 40px 5% !important;
+    gap: 40px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-inner {
+    padding: 32px 4% !important;
   }
 }
