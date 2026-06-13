@@ -43,8 +43,8 @@ export default function ClientLogos() {
               key={i}
               src={`/clients/${file}.png`}
               alt={name}
-              className="flex-shrink-0 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity duration-300"
-              style={{ height: 'clamp(3rem, 5vw, 5rem)' }}
+              className="flex-shrink-0 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+              style={{ height: 'clamp(2.5rem, 4vw, 4rem)', filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.06))' }}
             />
           ))}
         </div>
