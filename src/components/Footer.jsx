@@ -6,6 +6,7 @@ const socialLinks = [
   { label: 'Instagram', icon: 'fa-brands fa-instagram',     href: 'https://www.instagram.com/professional_softtech' },
   { label: 'YouTube',   icon: 'fa-brands fa-youtube',       href: '#' },
   { label: 'X',         icon: 'fa-brands fa-x-twitter',     href: '#' },
+  { label: 'Upwork',    icon: 'fa-brands fa-upwork',         href: 'https://www.upwork.com/agencies/425296127165009920/' },
   { label: 'Dribbble',  icon: 'fa-brands fa-dribbble',      href: '#' },
 ];
 
