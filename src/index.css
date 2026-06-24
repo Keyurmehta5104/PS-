@@ -31,8 +31,8 @@
   --color-surface:      #F7F4EC;   /* subtle card bg                           */
 
   /* Marquee animations */
-  --animate-marquee-left:  marquee-left  40s linear infinite;
-  --animate-marquee-right: marquee-right 40s linear infinite;
+  --animate-marquee-left:  marquee-left  80s linear infinite;
+  --animate-marquee-right: marquee-right 80s linear infinite;
   --animate-float-y:       float-y       4s ease-in-out infinite;
 
   @keyframes marquee-left {
@@ -294,7 +294,7 @@ html, body { background-color: #F7F4EC; }
 
   /* Marquee animation utility for ClientLogos */
   .animate-marquee-left {
-    animation: marquee-left 32s linear infinite;
+    animation: marquee-left 80s linear infinite;
   }
 }
 
