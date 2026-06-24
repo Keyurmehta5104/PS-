@@ -3,7 +3,7 @@ const ORANGE = '#FF8048';
 const socialLinks = [
   { label: 'LinkedIn',  icon: 'fa-brands fa-linkedin-in',  href: 'https://www.linkedin.com/company/professional-softtech' },
   { label: 'Facebook',  icon: 'fa-brands fa-facebook-f',    href: 'https://www.facebook.com/ProfessionalSofttech/' },
-  { label: 'Instagram', icon: 'fa-brands fa-instagram',     href: '#' },
+  { label: 'Instagram', icon: 'fa-brands fa-instagram',     href: 'https://www.instagram.com/professional_softtech' },
   { label: 'YouTube',   icon: 'fa-brands fa-youtube',       href: '#' },
   { label: 'X',         icon: 'fa-brands fa-x-twitter',     href: '#' },
   { label: 'Dribbble',  icon: 'fa-brands fa-dribbble',      href: '#' },
